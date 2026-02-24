@@ -92,8 +92,10 @@ ready(function(){
   }
 
   async function submit(){
+    console.log("SUBMIT WURDE GEKLICKT");
     const duration = Date.now()-state.startTime;
 
+    console.log("SENDE AN API:", API+"?path=submit");
     fetch(API+"?path=submit",{
       method:"POST",
       headers:{'Content-Type':'application/json'},
@@ -160,3 +162,4 @@ ready(function(){
 });
 
 })();
+
